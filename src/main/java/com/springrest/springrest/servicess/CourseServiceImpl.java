@@ -43,7 +43,12 @@ public class CourseServiceImpl implements com.springrest.springrest.services.Cou
         return course;
     }
 
+    @Override
+    public Course UpdateCoures(Course course) {
+        list.add(course);
+        return course;
 
+    }
     }
 
 

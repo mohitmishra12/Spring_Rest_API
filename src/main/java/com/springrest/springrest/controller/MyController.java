@@ -18,15 +18,21 @@ public class MyController {
     }
 
     @GetMapping("/courses/{courseId}")
-    public  Course getCourse(@PathVariable String courseId){
+    public Course getCourse(@PathVariable String courseId) {
         return this.courseService.getCourses(Long.parseLong(courseId));
     }
 
 
     @PostMapping("/courses")
-    public Course addCourse(@RequestBody Course course){
+    public Course addCourse(@RequestBody Course course) {
 
-        return  this.courseService.addCoures(course);
+        return this.courseService.addCoures(course);
 
+    }
+
+    @PutMapping("/courses")
+    public Course UpdateCourse(@RequestBody Course course) {
+
+        return this.courseService.UpdateCoures(course);
     }
 }
