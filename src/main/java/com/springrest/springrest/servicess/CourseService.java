@@ -11,4 +11,6 @@ public interface CourseService {
 
 
     com.springrest.springrest.entity.Course addCoures(com.springrest.springrest.entity.Course course);
+
+    com.springrest.springrest.entity.Course UpdateCoures(com.springrest.springrest.entity.Course course);
 }
