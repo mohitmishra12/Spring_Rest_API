@@ -6,7 +6,7 @@ import org.springframework.stereotype.Service;
 import com.springrest.springrest.entity.Course;
 
 @Service
-public class CourseServiceImpl implements CourseService {
+public class CourseServiceImpl implements com.springrest.springrest.services.CourseService {
 
     List<Course> list;
 
@@ -22,5 +22,28 @@ public class CourseServiceImpl implements CourseService {
     @Override
     public List<Course> getCourses() {
         return list;
+
     }
-}
+
+    @Override
+    public Course getCourses(long courseId) {
+        Course c = null;
+        for (Course course : list) {
+            if (course.getId() == courseId) {
+                c = course;
+                break;
+            }
+        }
+        return c;
+    }
+
+    @Override
+    public Course addCoures(Course course) {
+        list.add(course);
+        return course;
+    }
+
+
+    }
+
+

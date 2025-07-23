@@ -5,4 +5,10 @@ import com.springrest.springrest.entity.Course;
 
 public interface CourseService {
     public List<Course> getCourses();
+    public Course getCourses( long courseId);
+
+//    public  Course addCourse(Course course);
+
+
+    com.springrest.springrest.entity.Course addCoures(com.springrest.springrest.entity.Course course);
 }
